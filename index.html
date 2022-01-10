@@ -268,15 +268,15 @@
   <script>
     var swee = null
     var sweed = false
-    setTimeout(function () {
-      swee = Swal.fire(
-        'Loading you in...',
-        'Press F11 to toggle fullscreen! Due to high traffic, loading can take up to 1min depending on network conditions.',
-        'info'
-      ).then(res => {
-        sweed = true
-      })
-    }, 1);
+    // setTimeout(function () {
+    //   swee = Swal.fire(
+    //     'Loading you in...',
+    //     'Press F11 to toggle fullscreen!',
+    //     'info'
+    //   ).then(res => {
+    //     sweed = true
+    //   })
+    // }, 1);
   </script>
   <div id="unity-container" class="unity-desktop">
     <canvas id="unity-canvas" width=1920 height=1080></canvas>
@@ -364,9 +364,9 @@
         progressBarFull.style.width = 100 * progress + "%";
       }).then((unityInstance) => {
         sessionStorage.setItem('fullscreen', "no");
-        Swal.fire(
+        let swee = Swal.fire(
           'Strap in!',
-          'Exit fullscreen with F11 and click "Return" to leave.',
+          'Toggle fullscreen with F11 and click "Return" to leave.',
           'info'
         ).then(res => {
           if (sweed) {
