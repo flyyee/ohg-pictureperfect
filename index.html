@@ -248,6 +248,7 @@
     background-image: url('https://ri-oh-2022.vercel.app/gamebg.png');
     background-repeat: no-repeat;
     background-size: cover;
+    text-align: center;
   }
 
   h1 {
@@ -268,15 +269,15 @@
   <script>
     var swee = null
     var sweed = false
-    setTimeout(function () {
-      swee = Swal.fire(
-        'Loading you in...',
-        'Press F11 to toggle fullscreen!',
-        'info'
-      ).then(res => {
-        sweed = true
-      })
-    }, 1);
+    // setTimeout(function () {
+    //   swee = Swal.fire(
+    //     'Loading you in...',
+    //     'Press F11 to toggle fullscreen!',
+    //     'info'
+    //   ).then(res => {
+    //     sweed = true
+    //   })
+    // }, 1);
   </script>
   <div id="unity-container" class="unity-desktop">
     <canvas id="unity-canvas" width=1920 height=1080></canvas>
@@ -369,15 +370,15 @@
           'Exit fullscreen with F11 and click "Return" to leave.',
           'info'
         ).then(res => {
-          if (sweed) {
+          // if (sweed) {
             unityInstance.SetFullscreen(1);
             sessionStorage.setItem('fullscreen', "yes");
-          } else {
-            swee.then(res => {
-              unityInstance.SetFullscreen(1);
-              sessionStorage.setItem('fullscreen', "yes");
-            })
-          }
+          // } else {
+          //   swee.then(res => {
+          //     unityInstance.SetFullscreen(1);
+          //     sessionStorage.setItem('fullscreen', "yes");
+          //   })
+          // }
           loadingBar.style.display = "none";
           // $("#infoload").remove();
           fullscreenButton.onclick = () => {
