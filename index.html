@@ -370,28 +370,28 @@
           'info'
         ).then(res => {
           if (sweed) {
-            unityInstance.SetFullscreen(1);
+            // unityInstance.SetFullscreen(1);
             sessionStorage.setItem('fullscreen', "yes");
           } else {
             swee.then(res => {
-              unityInstance.SetFullscreen(1);
+              // unityInstance.SetFullscreen(1);
               sessionStorage.setItem('fullscreen', "yes");
             })
           }
           loadingBar.style.display = "none";
           // $("#infoload").remove();
           fullscreenButton.onclick = () => {
-            unityInstance.SetFullscreen(1);
+            // unityInstance.SetFullscreen(1);
           };
-          shortcut.add("F11", function () {
-            if (sessionStorage.getItem('fullscreen') == "yes") {
-              unityInstance.SetFullscreen(0);
-              sessionStorage.setItem('fullscreen', "no");
-            } else {
-              unityInstance.SetFullscreen(1);
-              sessionStorage.setItem('fullscreen', "yes");
-            }
-          });
+          // shortcut.add("F11", function () {
+          //   if (sessionStorage.getItem('fullscreen') == "yes") {
+          //     unityInstance.SetFullscreen(0);
+          //     sessionStorage.setItem('fullscreen', "no");
+          //   } else {
+          //     unityInstance.SetFullscreen(1);
+          //     sessionStorage.setItem('fullscreen', "yes");
+          //   }
+          // });
         })
       }).catch((message) => {
         alert(message);
